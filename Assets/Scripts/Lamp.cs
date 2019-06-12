@@ -14,19 +14,23 @@ public class Lamp : MonoBehaviour
     }
 
     void TurnOn(){
+       if(!IsInvoking("LightOn"))
        Invoke("LightOn",Random.Range(0,3));
     }
     void TurnOff(){
+        if (!IsInvoking("LightOff"))
         Invoke("LightOff",Random.Range(0,3));
         
     }
     
     void LightOn(){
+        CancelInvoke("LightOff");
         rend.materials[1].EnableKeyword("_EMISSION");
         mylight.enabled=true;
 
     }
     void LightOff(){
+        CancelInvoke("LightOn");
         rend.materials[1].DisableKeyword("_EMISSION");
         mylight.enabled=false;
         
