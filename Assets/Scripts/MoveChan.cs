@@ -8,9 +8,11 @@ public class MoveChan : MonoBehaviour
     CharacterController charctrl;
     Animator anim;
     Vector3 movaxis,turnaxis;
+    public bool punching = false;
      void Start()
     {
-        charctrl=GetComponent<CharacterController>();
+            punching = false;
+    charctrl=GetComponent<CharacterController>();
         anim=GetComponent<Animator>();
     }
 
@@ -27,8 +29,41 @@ public class MoveChan : MonoBehaviour
         anim.SetFloat("Turn",turnaxis.y);
 
        if(Input.GetButtonDown("Fire1")){
+            
            anim.SetTrigger("Punch");
-       }
+            Invoke("False", 0.2f);
+            Invoke("False2", 0.5f);
+        }
     }
-     
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Eenemy")
+        {
+            Globals.life -= 10;
+
+
+            if (punching == true)
+            {
+                Destroy(other.gameObject);
+                Globals.Enemys -= 1;
+                punching = false;
+            }
+        }
+       else if (other.gameObject.tag == "Obj" && punching == true)
+        {
+        
+                Destroy(other.gameObject);
+                //Globals.Enemys -= 1;
+            
+            
+        }
+    }
+    void False()
+    {
+        punching = true;
+    }
+    void False2()
+    {
+        punching = false;
+    }
 }
