@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CenaGuilhermo.unity
     guid: 82c6756ea3d85b844b21dc6db31b5afe
+  - enabled: 0
+    path: Assets/Scenes/CenaLeo.unity
+    guid: 38a7779bafd755547a8f324b6739e251
+  - enabled: 1
+    path: Assets/Scenes/CenaLeo 1.unity
+    guid: 41f96df4e0576e04a8357a5891cfc28b
   m_configObjects: {}

@@ -4071,7 +4071,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Parab\xE9ns"
+  m_Text: Sucesso
 --- !u!222 &1603312553
 CanvasRenderer:
   m_ObjectHideFlags: 0
