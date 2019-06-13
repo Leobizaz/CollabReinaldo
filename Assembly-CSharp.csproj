@@ -65,6 +65,7 @@
     <Compile Include="Assets\3D Cartoon Village\QuebraCAixa.cs" />
     <Compile Include="Assets\EnemyPatrol.cs" />
     <Compile Include="Assets\Globals.cs" />
+    <Compile Include="Assets\PKG_FELIPE\DestructableOBJ.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
