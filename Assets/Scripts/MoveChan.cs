@@ -40,14 +40,6 @@ public class MoveChan : MonoBehaviour
         if (other.gameObject.tag == "Eenemy")
         {
             Globals.life -= 10;
-
-
-            if (punching == true)
-            {
-                Destroy(other.gameObject);
-                Globals.Enemys -= 1;
-                punching = false;
-            }
         }
        else if (other.gameObject.tag == "Obj" && punching == true)
         {
@@ -58,6 +50,18 @@ public class MoveChan : MonoBehaviour
             
         }
     }
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Eenemy" && punching == true)
+        {
+            Destroy(other.gameObject);
+            Globals.Enemys -= 1;
+            punching = false;
+        }
+        
+    }
+
     void False()
     {
         punching = true;
